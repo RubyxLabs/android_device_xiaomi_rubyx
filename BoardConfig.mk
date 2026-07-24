@@ -97,6 +97,9 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6877
 TARGET_KERNEL_CONFIG := ruby_defconfig
 TARGET_KERNEL_NO_GCC := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
+TARGET_KERNEL_DTB := mediatek/mt6877.dtb mediatek/ruby.dtbo
+TARGET_DTB_LIST_WILDCARD := mediatek/mt6877
+TARGET_DTBO_LIST_WILDCARD := mediatek/ruby
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072                   # 2048      * 64   (pagesize)
