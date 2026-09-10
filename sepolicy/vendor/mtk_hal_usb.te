@@ -1,0 +1,5 @@
+# Android 16 labels the UDC class directory separately from the controller.
+# Permit traversal to the existing sysfs_usb_nonplat controller nodes without
+# granting write access to the generic UDC class or changing their labels.
+allow mtk_hal_usb sysfs_udc:dir search;
+allow mtk_hal_usb sysfs_udc:lnk_file read;
