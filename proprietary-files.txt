@@ -1384,10 +1384,12 @@ system_ext/priv-app/MtkGbaService/MtkGbaService.apk:system/priv-app/MtkGbaServic
 # Keymaster
 vendor/bin/bp_kmsetkey_ca
 vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
-vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service|bac805f433cac0c85229a185e6339f421833b99d
-vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc|ffc5e689e8953d3eb1ec0e3a06ac1c0ff51fc914
-vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so|f0931d6c7a6ed1040efcf2cea39b511f40c545da
-vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so|8944a21e6e3dda12a3ad02a05b237320d4c51bb9
+vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
+vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
+vendor/lib64/hw/kmsetkey.beanpod.so
+vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
+vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
+vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc
 vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 
