@@ -75,6 +75,7 @@ on fs
     restorecon_recursive /mnt/rescue
 
 on late-fs
+    start keymaster_attestation-1-1
     mount_all --late
 
 on post-fs
