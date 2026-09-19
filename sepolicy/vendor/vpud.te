@@ -2,3 +2,6 @@ get_prop(vpud_native, vendor_camera_prop)
 
 # The encoder maps bitstream DMA buffers allocated by the Codec2 HAL.
 allow vpud_native mtk_hal_c2:fd use;
+
+# Decoder input DMA buffers retain the allocating app's file credentials.
+allow vpud_native untrusted_app_all:fd use;
