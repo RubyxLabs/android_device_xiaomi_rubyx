@@ -194,3 +194,6 @@ subsystem mi_display
 
 # Raw HID devices
 /dev/hidraw*                           0660   system     system
+
+# Face detection may probe after the one-shot init chmod/chown actions.
+/dev/camera-fdvt 0660 system camera
