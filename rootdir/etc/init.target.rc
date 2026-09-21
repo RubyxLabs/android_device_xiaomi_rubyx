@@ -1,2 +1,11 @@
 on boot
     stop console
+
+# Codec2 depends on the vendor video-processing daemon.  Keep this property
+# trigger in the system init context: vendor_init is not allowed to read the
+# private init.svc.vpud service-status property.
+on property:init.svc.vpud=running
+    start android-hardware-media-c2-hal-1-2
+
+on property:init.svc.vpud=stopped
+    stop android-hardware-media-c2-hal-1-2
