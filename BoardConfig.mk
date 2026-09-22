@@ -115,6 +115,10 @@ BOARD_SUPER_PARTITION_GROUPS := mediatek_dynamic_partitions
 BOARD_MEDIATEK_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor
 BOARD_MEDIATEK_DYNAMIC_PARTITIONS_SIZE := 9122611200 # BOARD_SUPER_PARTITION_SIZE - 4MB
 
+# Keep enough super space for all four Virtual A/B COW partitions in recovery.
+# Lineage's 1.18 GB product reserve spills vendor's COW into unmounted /data.
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 536870912
+
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
