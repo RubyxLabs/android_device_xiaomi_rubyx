@@ -53,7 +53,7 @@ on enable-low-power
 
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
-    # Enable big task rotation
+    # Enable Ruby big task rotation.
     write /proc/perfmgr/boost_ctrl/eas_ctrl/sched_big_task_rotation 1
 
     # Configure DVFS
@@ -114,6 +114,18 @@ on property:sys.boot_completed=1
     chmod 0664 /proc/ppm/policy/cluster_0_min_freq
     chmod 0664 /proc/ppm/policy/cluster_1_max_freq
     chmod 0664 /proc/ppm/policy/cluster_1_min_freq
+
+# Keep the stock boot-trace switch connected to the ported perf tracker.
+on post-fs-data && property:ro.boot.boot_trace=1
+    write /sys/devices/system/cpu/perf/enable 1
+    write /sys/kernel/tracing/events/perf_tracker/enable 1
+
+on property:persist.vendor.boot_trace=1
+    write /sys/devices/system/cpu/perf/enable 1
+    write /sys/kernel/tracing/events/perf_tracker/enable 1
+
+on property:sys.boot_completed=1 && property:persist.vendor.boot_trace=1
+    write /sys/devices/system/cpu/perf/enable 0
 
 service vendor.gralloc-4-0 /vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
     class hal animation
