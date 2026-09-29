@@ -1,1 +1,15 @@
+cam.egnsavefile.enable                    u:object_r:system_ruby_camera_legacy_prop:s0 exact bool
+debuglog.drv                             u:object_r:system_ruby_camera_legacy_prop:s0
+debuglog.drv.                            u:object_r:system_ruby_camera_legacy_prop:s0
+demo.fb                                  u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+demo.far                                 u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+demo.hole                                u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+demo.near                                u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+jpeg.exif.icc.profile                    u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+persist.camera.aiscene                   u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+persist.camera.altekLDC.disableFaceUpdate u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+persist.camera.altekLDC.face             u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+persist.camera.debug.sn.fixev            u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+persist.camera.fpc.debugsetting          u:object_r:system_ruby_camera_legacy_prop:s0 exact string
+
 ro.product.mod_device u:object_r:build_prop:s0

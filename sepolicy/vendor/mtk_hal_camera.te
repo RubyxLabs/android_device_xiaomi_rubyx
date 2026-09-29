@@ -7,8 +7,11 @@ allow mtk_hal_camera camera_persist_file:dir search;
 
 allow mtk_hal_camera sysfs_therm:dir search;
 allow mtk_hal_camera sysfs_therm:file rw_file_perms;
+allow mtk_hal_camera sysfs_fpsgo:dir r_dir_perms;
+allow mtk_hal_camera sysfs_fpsgo:file rw_file_perms;
 
 rw_dir_file(mtk_hal_camera, sysfs_leds)
 
 get_prop(mtk_hal_camera, vendor_camera_prop)
+get_prop(mtk_hal_camera, system_ruby_camera_legacy_prop)
 set_prop(mtk_hal_camera, vendor_camera_prop)
