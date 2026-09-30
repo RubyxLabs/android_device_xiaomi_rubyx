@@ -14,6 +14,19 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# Virtual A/B compression: use userspace snapshots (snapuserd) instead of the
+# slow legacy dm-snapshot COW path for full-OTA installs.
+PRODUCT_VIRTUAL_AB_COMPRESSION := true
+PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.virtual_ab.compression.enabled=true \
+    ro.virtual_ab.userspace.snapshots.enabled=true \
+    ro.virtual_ab.batch_writes=true \
+    ro.virtual_ab.io_uring.enabled?=true
+PRODUCT_PACKAGES += \
+    snapuserd \
+    snapuserd.recovery
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
