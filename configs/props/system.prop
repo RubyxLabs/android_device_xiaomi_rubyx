@@ -7,9 +7,6 @@ persist.sys.brightness.low.gamma=true
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
-# eBPF
-ro.bpf.kver_override=6.6.127
-
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
