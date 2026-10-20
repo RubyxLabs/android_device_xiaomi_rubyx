@@ -236,13 +236,13 @@
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "900000"
+      "Value": "500000"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "910000"
+      "Value": "650000"
     },
     {
       "PowerHint": "INTERACTION",
