@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--
+    SPDX-FileCopyrightText: 2026 The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<carrier_config_list>
+    <!-- Carrier ID 2018: Reliance Jio -->
+    <carrier_config cid="2018" name="jio">
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="support_downgrade_vt_to_audio_bool" value="true" />
+        <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
+    </carrier_config>
+</carrier_config_list>
