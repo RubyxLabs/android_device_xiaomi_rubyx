@@ -1,0 +1,5 @@
+# The Dolby OMX decoders obtain their shared configuration from DMS.
+hal_client_domain(mediacodec, hal_dms)
+
+# DMS notifies registered decoder clients when their configuration changes.
+binder_call(hal_dms_server, mediacodec)

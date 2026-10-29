@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
     MtkInCallService \
     XiaomiDolby
 
+# The vendor Dolby decoders use OMX even on a product with 64-bit-only apps.
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service
+
 PRODUCT_PACKAGES += \
     libdynproc:32 \
     libhapticgenerator:32
