@@ -417,6 +417,7 @@ PRODUCT_COPY_FILES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    wlan_assistant \
     wpa_supplicant \
     hostapd \
     libwifi-hal-wrapper \
