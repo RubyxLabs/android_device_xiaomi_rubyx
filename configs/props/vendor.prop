@@ -1,3 +1,10 @@
+# USB
+vendor.usb.controller=usb0
+vendor.usb.vid=0x2717
+vendor.usb.pid=0xFF08
+vendor.usb.rndis.config=rndis.gs4
+vendor.usb.charger.config=hid
+
 # Audio
 aaudio.mmap_exclusive_policy=0
 aaudio.mmap_policy=0
