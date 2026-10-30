@@ -258,6 +258,8 @@ telephony.lteOnCdmaDevice=1
 
 # Sensors
 ro.vendor.mtk.sensor.support=yes
+ro.vendor.sensors.xiaomi.double_tap=true
+ro.vendor.sensors.xiaomi.single_tap=true
 
 # Trusted Execution Environment (TEE)
 ro.hardware.wechat=beanpod

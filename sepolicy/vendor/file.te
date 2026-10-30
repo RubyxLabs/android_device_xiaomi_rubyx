@@ -14,3 +14,6 @@ type vendor_sysfs_fingerprint, fs_type, sysfs_type;
 
 # GPU
 type vendor_sysfs_gpu, fs_type, sysfs_type;
+
+# Touchscreen gesture sensors
+type vendor_sysfs_touch_gesture, fs_type, sysfs_type;

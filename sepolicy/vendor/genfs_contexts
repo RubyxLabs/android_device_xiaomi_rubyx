@@ -19,6 +19,12 @@ genfscon sysfs /devices/platform/13000000.mali/js_ctx_scheduling_mode u:object_r
 genfscon sysfs /devices/platform/13000000.mali/js_scheduling_period u:object_r:vendor_sysfs_gpu:s0
 genfscon sysfs /devices/platform/13000000.mali/dvfs_period u:object_r:vendor_sysfs_gpu:s0
 
+# Touchscreen gesture sensors
+genfscon sysfs /devices/virtual/touch/touch_dev/gesture_double_tap_enabled u:object_r:vendor_sysfs_touch_gesture:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/gesture_double_tap_state u:object_r:vendor_sysfs_touch_gesture:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_enabled u:object_r:vendor_sysfs_touch_gesture:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_state u:object_r:vendor_sysfs_touch_gesture:s0
+
 # Health
 genfscon sysfs /devices/platform/mt_charger/power_supply/ac                                        u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/battery/power_supply/battery                                      u:object_r:sysfs_batteryinfo:s0

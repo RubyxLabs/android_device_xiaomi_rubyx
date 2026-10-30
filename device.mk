@@ -337,8 +337,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-xiaomi)
-
 # Power Off Alarm
 PRODUCT_PACKAGES += \
     PowerOffAlarm
@@ -356,7 +354,8 @@ PRODUCT_OTHER_JAVA_DEBUG_INFO := false
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-subhal-impl-1.0:64 \
-    android.hardware.sensors-service.xiaomi-multihal
+    android.hardware.sensors-service.xiaomi-multihal \
+    sensors.xiaomi.v2
 
 PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal:64
