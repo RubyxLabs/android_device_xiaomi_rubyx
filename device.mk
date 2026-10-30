@@ -73,20 +73,17 @@ TARGET_EXCLUDES_AUDIOFX := true
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl:32 \
     android.hardware.audio.effect@7.0-impl:32 \
-    android.hardware.soundtrigger@2.3-impl:32 \
-    android.hardware.audio.service
+    android.hardware.soundtrigger@2.3-impl:32
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default:32 \
     android.hardware.bluetooth.audio-impl:32
 
 PRODUCT_PACKAGES += \
-    MtkInCallService \
-    XiaomiDolby
+    MtkInCallService
 
-# The vendor Dolby decoders use OMX even on a product with 64-bit-only apps.
-PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-service
+# LunarisDolby, Pong tuning and the complete 64-bit Dolby backend.
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 PRODUCT_PACKAGES += \
     libdynproc:32 \
@@ -97,7 +94,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    $(DEVICE_PATH)/configs/audio/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
