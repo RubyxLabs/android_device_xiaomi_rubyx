@@ -1,0 +1,2 @@
+# DMS selects the MediaTek audio scenario when restoring its state.
+set_prop(hal_dms_default, vendor_mtk_audio_prop)
