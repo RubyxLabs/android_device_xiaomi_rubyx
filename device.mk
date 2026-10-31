@@ -185,7 +185,10 @@ PRODUCT_PACKAGES += \
     IFAAService
 
 # IMS
-$(call inherit-product, vendor/mediatek/ims/ims.mk)
+$(call inherit-product, hardware/mediatek/frameworks/mediatek-frameworks.mk)
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
 # Init
 PRODUCT_PACKAGES += \
@@ -255,6 +258,7 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayRubyPro \
     SettingsOverlayRuby \
     SystemUIOverlayRuby \
+    TelephonyOverlayRuby \
     TetheringResOverlayRuby \
     WifiResOverlayRuby
 

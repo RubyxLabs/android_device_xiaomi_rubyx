@@ -28,11 +28,24 @@ namespace_imports = [
     'hardware/xiaomi',
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}-{partition}' if partition == 'vendor' else None
+
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    ('vendor.mediatek.hardware.videotelephony@1.0',): lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
+        .apktool_patch('blob-patches/ImsService.patch'),
+    'system_ext/lib64/libimsma.so': blob_fixup()
+        .replace_needed('libsink.so', 'libsink-mtk.so'),
+    'system_ext/lib64/libsink-mtk.so': blob_fixup()
+        .add_needed('libaudioclient_shim.so'),
+    'system_ext/lib64/libsource.so': blob_fixup()
+        .add_needed('libui_shim.so'),
     'vendor/bin/mi_thermald': blob_fixup()
         .binary_regex_replace(b'%d/on', b'%d/..'),
     ('vendor/bin/hw/android.hardware.gnss-service.mediatek',
@@ -102,7 +115,8 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.14-impl.so'): blob_fixup()
 	    .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 
-    'vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc': blob_fixup()
+    ('system_ext/etc/init/init.vtservice.rc',
+     'vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc'): blob_fixup()
         .regex_replace('start', 'enable'),
         
     ('vendor/lib/libvcodec_oal.so'): blob_fixup()
