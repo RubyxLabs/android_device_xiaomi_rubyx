@@ -2,6 +2,10 @@
   "Sensors": [
     {
       "Name": "CPU",
+      "Monitor": true,
+      "PollingOnly": true,
+      "PollingDelay": 2000,
+      "PassiveDelay": 1000,
       "Type": "CPU",
       "ZoneName": "mtktscpu",
       "HotThreshold": ["NaN", "NaN", "NaN", 85, 90, 100, 117],
@@ -10,6 +14,10 @@
     },
     {
       "Name": "GPU",
+      "Monitor": true,
+      "PollingOnly": true,
+      "PollingDelay": 2000,
+      "PassiveDelay": 1000,
       "Type": "GPU",
       "ZoneName": "mtktscpu",
       "HotThreshold": ["NaN", "NaN", "NaN", 85, 90, 100, 117],
@@ -18,6 +26,10 @@
     },
     {
       "Name": "mtktsbattery",
+      "Monitor": true,
+      "PollingOnly": true,
+      "PollingDelay": 2000,
+      "PassiveDelay": 1000,
       "Type": "BATTERY",
       "HotThreshold": ["NaN", "NaN", "NaN", 50, 55, 59, 60],
       "VrThreshold": "50.0",
@@ -25,6 +37,10 @@
     },
     {
       "Name": "mtktsAP",
+      "Monitor": true,
+      "PollingOnly": true,
+      "PollingDelay": 2000,
+      "PassiveDelay": 1000,
       "Type": "SKIN",
       "HotThreshold": ["NaN", "NaN", "NaN", 50, 70, 80, 90],
       "VrThreshold": "50.0",
@@ -32,6 +48,10 @@
     },
     {
       "Name": "mtktsbtsmdpa",
+      "Monitor": true,
+      "PollingOnly": true,
+      "PollingDelay": 2000,
+      "PassiveDelay": 1000,
       "Type": "POWER_AMPLIFIER",
       "HotThreshold": ["NaN", "NaN", "NaN", 68, 90, 100, 110],
       "VrThreshold": "NaN",
@@ -39,6 +59,10 @@
     },
     {
       "Name": "NPU",
+      "Monitor": true,
+      "PollingOnly": true,
+      "PollingDelay": 2000,
+      "PassiveDelay": 1000,
       "Type": "NPU",
       "ZoneName": "mtktscpu",
       "HotThreshold": ["NaN", "NaN", "NaN", 85, 90, 100, 117],
