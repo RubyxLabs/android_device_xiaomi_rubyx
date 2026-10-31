@@ -182,6 +182,8 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := 1
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
 # Wi-Fi
+$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
+
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_mt66xx
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mt66xx_supplicant
