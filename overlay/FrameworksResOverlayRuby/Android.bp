@@ -7,5 +7,7 @@ runtime_resource_overlay {
     name: "FrameworksResOverlayRuby",
     sdk_version: "current",
     resource_dirs: ["res"],
+    // Preserve APN credentials and MVNO match values with leading zeroes.
+    aaptflags: ["--keep-raw-values"],
     vendor: true,
 }
