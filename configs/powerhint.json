@@ -384,44 +384,9 @@
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "2400000"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "1903000"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "FGUclampMin",
-      "Duration": 0,
-      "Value": "30"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "TAUclampMin",
-      "Duration": 0,
-      "Value": "70"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "DRAMOppMin",
       "Duration": 0,
       "Value": "1"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "SchedBoost",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Type": "EndHint",
-      "Value": "INTERACTION"
     }
   ]
 }
