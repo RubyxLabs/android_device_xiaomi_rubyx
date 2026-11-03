@@ -1,0 +1,10 @@
+cc_library_shared {
+    name: "audio.primary.rubyx",
+    vendor: true,
+    relative_install_path: "hw",
+    compile_multilib: "32",
+    srcs: ["AudioPrimary.cpp"],
+    header_libs: ["libhardware_headers", "libaudio_system_headers"],
+    shared_libs: ["libdl", "liblog"],
+    cflags: ["-Wall", "-Wextra", "-Werror"],
+}

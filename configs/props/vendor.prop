@@ -6,6 +6,7 @@ vendor.usb.rndis.config=rndis.gs4
 vendor.usb.charger.config=hid
 
 # Audio
+ro.hardware.audio.primary=rubyx
 aaudio.mmap_exclusive_policy=0
 aaudio.mmap_policy=0
 ro.audio.monitorRotation=true
