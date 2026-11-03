@@ -1,0 +1,5 @@
+# Ignore fingerprint navigation events on the side-mounted sensor.
+key 103 UNKNOWN
+key 105 UNKNOWN
+key 106 UNKNOWN
+key 108 UNKNOWN
