@@ -190,11 +190,12 @@
       "Name": "DRAMOppMin",
       "Path": "/proc/perfmgr/boost_ctrl/dram_ctrl/ddr",
       "Values": [
+        "0",
         "1",
-        "0"
+        "-1"
       ],
       "ResetOnInit": true,
-      "DefaultIndex": 1
+      "DefaultIndex": 2
     },
     {
       "Name": "SchedBoost",
@@ -272,7 +273,7 @@
       "PowerHint": "INTERACTION",
       "Node": "TAUclampMin",
       "Duration": 800,
-      "Value": "100"
+      "Value": "10"
     },
     {
       "PowerHint": "INTERACTION",
@@ -291,12 +292,6 @@
       "Node": "GPUBlockBoost",
       "Duration": 800,
       "Value": "60"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedBoost",
-      "Duration": 800,
-      "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
